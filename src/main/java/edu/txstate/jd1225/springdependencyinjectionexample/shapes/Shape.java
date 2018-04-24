@@ -2,8 +2,8 @@ package edu.txstate.jd1225.springdependencyinjectionexample.shapes;
 
 
 public abstract class Shape implements IShape {
-    double perimeter = 0;
-    public void setPerimeter(double perimeter) {
+    Double perimeter = 0.0;
+    public Shape(double perimeter) {
         this.perimeter = perimeter;
     }
 

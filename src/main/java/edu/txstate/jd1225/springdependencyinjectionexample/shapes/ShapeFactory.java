@@ -5,18 +5,13 @@ public class ShapeFactory {
         Shape newShape;
         switch (shape) {
             case "Circle":
-                newShape = new Circle();
-                break;
+                return new Circle(perimiter);
             case "EquilateralTriangle":
-                newShape = new EquilateralTriangle();
-                break;
+                return new EquilateralTriangle(perimiter);
             case "Square":
-                newShape = new Square();
-                break;
+                return new Square(perimiter);
             default:
                 throw new Shape.ShapeException("Shape type not found");
         }
-        newShape.setPerimeter(perimiter);
-        return newShape;
     }
 }

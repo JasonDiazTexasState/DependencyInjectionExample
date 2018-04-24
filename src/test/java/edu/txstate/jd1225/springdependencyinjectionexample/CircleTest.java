@@ -1,6 +1,5 @@
 package edu.txstate.jd1225.springdependencyinjectionexample;
 
-import edu.txstate.jd1225.springdependencyinjectionexample.shapes.Circle;
 import edu.txstate.jd1225.springdependencyinjectionexample.shapes.Shape;
 import edu.txstate.jd1225.springdependencyinjectionexample.shapes.ShapeFactory;
 import org.junit.BeforeClass;

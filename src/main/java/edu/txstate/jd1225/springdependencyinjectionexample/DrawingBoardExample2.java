@@ -9,9 +9,11 @@ public class DrawingBoardExample2 {
         this.shape = shape;
     }
 
-    public void printResults(){
+    public String printResults(){
         System.out.println("Example 2 shape is: " + shape.name());
         System.out.println("Example 2 shape area is: " + shape.area());
         System.out.println("Example 2 shape height is: " + shape.height());
+
+        return shape.name();
     }
 }

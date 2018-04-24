@@ -9,18 +9,14 @@ public class DrawingBoardExample1 {
 
     }
 
-    public void printResults(){
+    public String printResults() throws Shape.ShapeException {
         double perimeter = 100;
-        try {
+        Shape shape = ShapeFactory.getShape("Circle", perimeter);
 
-            Shape shape = ShapeFactory.getShape("Circle", perimeter);
             System.out.println("Example 1 shape is: " + shape.name());
             System.out.println("Example 1 shape area is: " + shape.area());
             System.out.println("Example 1 shape height is: " + shape.height());
 
-        } catch (Shape.ShapeException e) {
-            e.printStackTrace();
-        }
-
+        return shape.name();
     }
 }

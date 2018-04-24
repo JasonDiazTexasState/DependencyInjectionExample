@@ -1,16 +1,22 @@
 package edu.txstate.jd1225.springdependencyinjectionexample;
 
+import org.junit.Assert;
 import org.junit.Test;
-import org.springframework.test.context.ActiveProfiles;
+import org.junit.runner.RunWith;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-//@ActiveProfiles("development")
+import javax.inject.Inject;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "/developmentContext.xml")
 public class DrawingBoardExample3Test {
+
+    @Inject
+    private DrawingBoardExample3 board3;
 
     @Test
     public void printResults() {
-
-
-        DrawingBoardExample3 board3 = new DrawingBoardExample3();
-        board3.printResults();
+        Assert.assertEquals("Circle", board3.printResults());
     }
 }

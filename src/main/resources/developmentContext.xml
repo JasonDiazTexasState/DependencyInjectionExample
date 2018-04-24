@@ -7,6 +7,12 @@
 
     <context:component-scan base-package="edu.txstate.jd1225" />
 
-    <bean id="shape" class ="edu.txstate.jd1225.springdependencyinjectionexample.shapes.Circle" lazy-init="true">
+    <bean id="doubleValue" class="java.lang.Double">
+        <constructor-arg index="0" value="3.7"/>
     </bean>
+
+    <bean id="shape" class ="edu.txstate.jd1225.springdependencyinjectionexample.shapes.Circle" lazy-init="true">
+        <constructor-arg name="perimeter" ref="doubleValue"/>
+    </bean>
+
 </beans>

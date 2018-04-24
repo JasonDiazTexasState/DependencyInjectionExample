@@ -1,17 +1,24 @@
 package edu.txstate.jd1225.springdependencyinjectionexample.shapes;
+
+import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
-public class Square extends Shape{
+public class Square extends Shape {
 
-    @Override
-    public double area() {
-        return (perimeter/4) * (perimeter/4);
+    @Inject
+    public Square(Double perimeter) {
+        super(perimeter);
     }
 
     @Override
-    public double height() {
-        return perimeter/4;
+    public Double area() {
+        return (perimeter / 4) * (perimeter / 4);
+    }
+
+    @Override
+    public Double height() {
+        return perimeter / 4;
     }
 
     @Override

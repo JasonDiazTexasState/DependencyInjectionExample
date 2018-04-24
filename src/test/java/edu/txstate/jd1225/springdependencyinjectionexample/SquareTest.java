@@ -1,7 +1,6 @@
 package edu.txstate.jd1225.springdependencyinjectionexample;
 
 import edu.txstate.jd1225.springdependencyinjectionexample.shapes.Shape;
-import edu.txstate.jd1225.springdependencyinjectionexample.shapes.ShapeFactory;
 import edu.txstate.jd1225.springdependencyinjectionexample.shapes.Square;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -13,11 +12,7 @@ public class SquareTest {
 
     @BeforeClass
     public static void setUp() {
-        try {
-            shape = ShapeFactory.getShape("Square", 40);
-        } catch (Shape.ShapeException e) {
-            e.printStackTrace();
-        }
+        shape = new Square(40.0);
     }
 
     @Test
